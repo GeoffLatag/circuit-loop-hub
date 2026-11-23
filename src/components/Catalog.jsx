@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UnitDetails from "./UnitDetails";
 
 // Format prices in Philippine pesos
 function formatPrice(price) {
@@ -33,6 +34,7 @@ function groupProducts(units) {
 function Catalog() {
   const [search, setSearch] = useState("");
   const [selectedModelId, setSelectedModelId] = useState(null);
+  const [selectedUnitId, setSelectedUnitId] = useState(null);
 
   // Live inventory
   const [units, setUnits] = useState([]);
@@ -117,6 +119,10 @@ function Catalog() {
   const selectedModel = products.find(
     (product) => product.modelId === selectedModelId
   );
+  const selectedUnit =
+  selectedModel?.units.find(
+    (unit) => unit.unitId === selectedUnitId
+  ) ?? null;
 
   return (
     <section
@@ -386,23 +392,44 @@ function Catalog() {
                     Condition: {unit.conditionNotes || "Not specified"}
                   </p>
 
-                  <div className="mt-6 border-t border-slate-100 pt-5">
+                <div className="mt-6 border-t border-slate-100 pt-5">
 
-                    <p className="text-2xl font-bold text-blue-600">
-                      {formatPrice(unit.pricePHP)}
-                    </p>
+                <p className="text-2xl font-bold text-blue-600">
+                    {formatPrice(unit.pricePHP)}
+                </p>
 
-                    <p className="mt-2 text-xs text-slate-400">
-                      Individual component record
-                    </p>
+                <p className="mt-2 text-xs text-slate-400">
+                    Individual component record
+                </p>
 
-                  </div>
+                <button
+                    type="button"
+                    onClick={() => setSelectedUnitId(unit.unitId)}
+                    className="mt-5 w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+                >
+                    View Unit Details →
+                </button>
 
                 </div>
 
-              ))}
+                </div>
+
+                           ))}
 
             </div>
+
+            {/* SELECTED COMPONENT PROFILE */}
+            {selectedUnit && (
+              <div className="mt-8" id="unit-details">
+
+                <UnitDetails
+                  unit={selectedUnit}
+                  productName={selectedModel.productName}
+                  onClose={() => setSelectedUnitId(null)}
+                />
+
+              </div>
+            )}
 
           </div>
 
