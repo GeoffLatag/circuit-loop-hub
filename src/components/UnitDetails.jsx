@@ -176,6 +176,49 @@ function UnitDetails({ unit, productName, onClose }) {
 
           </div>
 
+{/* CUSTOMER INQUIRY */}
+<div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+
+  <h3 className="text-xl font-bold text-slate-900">
+    Interested in This Component?
+  </h3>
+
+  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+    Contact Circuit Loop Hub through Facebook Messenger
+    to inquire about availability and purchasing arrangements.
+  </p>
+
+  <div className="mt-5 rounded-xl border border-blue-100 bg-white p-4">
+
+    <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+      Reference Unit ID
+    </p>
+
+    <p className="mt-2 text-lg font-bold text-slate-900">
+      {unit.unitId}
+    </p>
+
+    <p className="mt-2 text-xs text-slate-500">
+      Include this Unit ID when sending your inquiry.
+    </p>
+
+  </div>
+
+  <a
+    href="https://m.me/61595870237583"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-6 flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-4 text-sm font-bold text-white transition hover:bg-blue-500"
+  >
+    Inquire via Messenger ↗
+  </a>
+
+  <p className="mt-4 text-center text-xs leading-relaxed text-slate-500">
+    Available fulfillment options: Meetups within Batangas City
+    or Lalamove delivery at the customer's expense.
+  </p>
+
+</div>
 
           {/* DIGITAL PASSPORT */}
           <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-6">

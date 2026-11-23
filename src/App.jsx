@@ -29,46 +29,64 @@ function App() {
       <header className="relative z-20 border-b border-white/10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-          <a href="#home" className="flex items-center gap-3">
+  {/* LOGO */}
+  <a href="#home" className="flex items-center gap-3">
 
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-600/20">
-              <span className="text-lg font-black">CL</span>
-            </div>
+    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-600/20">
+      <span className="text-lg font-black">CL</span>
+    </div>
 
-            <div>
-              <h1 className="text-lg font-bold tracking-tight">
-                Circuit Loop <span className="text-blue-400">Hub</span>
-              </h1>
+    <div>
+      <h1 className="text-lg font-bold tracking-tight">
+        Circuit Loop <span className="text-blue-400">Hub</span>
+      </h1>
 
-              <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500">
-                Electronics Reimagined
-              </p>
-            </div>
+      <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500">
+        Electronics Reimagined
+      </p>
+    </div>
 
-          </a>
+  </a>
 
-          <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-            <a href="#home" className="transition hover:text-blue-400">
-              Home
-            </a>
 
-            <a href="#how-it-works" className="transition hover:text-blue-400">
-              How It Works
-            </a>
+  {/* NAVIGATION LINKS */}
+  <div className="hidden items-center gap-10 text-sm font-medium text-slate-300 md:flex">
 
-            <a href="#catalog" className="transition hover:text-blue-400">
-              Catalog
-            </a>
-          </div>
+    <a
+      href="#home"
+      className="transition hover:text-blue-400"
+    >
+      Home
+    </a>
 
-          <a
-            href="#catalog"
-            className="rounded-xl border border-blue-500/40 bg-blue-500/10 px-5 py-2.5 text-sm font-semibold text-blue-300 transition hover:bg-blue-500/20"
-          >
-            Explore Catalog
-          </a>
+    <a
+      href="#how-it-works"
+      className="transition hover:text-blue-400"
+    >
+      How It Works
+    </a>
 
-        </nav>
+    <a
+      href="#catalog"
+      className="transition hover:text-blue-400"
+    >
+      Catalog
+    </a>
+
+  </div>
+
+
+  {/* CONTACT BUTTON */}
+  <a
+    href="https://m.me/61595870237583"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-xl border border-blue-500/40 bg-blue-500/10 px-5 py-3 text-sm font-semibold text-blue-300 transition hover:border-blue-400 hover:bg-blue-500/20"
+  >
+    Contact Us ↗
+  </a>
+
+</nav>
       </header>
 
 
@@ -168,7 +186,7 @@ function App() {
                   </div>
 
                   <div className="rounded-lg bg-green-500/10 px-3 py-1.5 text-xs font-medium text-green-400">
-                    QA Passed
+                    QA Preview
                   </div>
 
                 </div>
@@ -284,14 +302,14 @@ function App() {
                     </div>
 
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-blue-400">
-                        ₱275
-                      </p>
+  <p className="text-lg font-bold text-blue-400">
+    Grade B
+  </p>
 
-                      <p className="text-xs text-slate-500">
-                        Grade B
-                      </p>
-                    </div>
+  <p className="mt-1 text-xs text-slate-500">
+    Sample Unit
+  </p>
+</div>
 
                   </div>
 
@@ -302,7 +320,7 @@ function App() {
                     </span>
 
                     <span className="text-xs font-semibold text-blue-400">
-                      Unit Passport →
+                      Documentation Preview
                     </span>
 
                   </div>
